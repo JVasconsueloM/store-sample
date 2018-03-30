@@ -1,0 +1,33 @@
+<ion-content>
+  <img src="assets/imgs/sign-up-background.jpg" class="background-img">
+
+  <div style="position: relative; min-height: 30%;">
+    <div class="middle">
+      <img src="assets/appicon.svg">
+    </div>
+  </div>
+  <form [formGroup]="form" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email Address</ion-label>
+        <ion-input type="text" formControlName="email" spellcheck="false" autocapitalize="off"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onSignup()" block [disabled]="!form.valid">Signup</button>
+      </ion-col>
+    </ion-row>
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button  block color="light" (click)="onLogin()">Login</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

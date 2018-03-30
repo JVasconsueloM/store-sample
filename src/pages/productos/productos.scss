@@ -1,0 +1,31 @@
+page-productos {
+  .ion-row * {
+    text-align: initial !important;
+  }
+  ion-card {
+    padding: 0;
+    margin-top: 0;
+
+    ion-card-content, .card-content-ios {
+      padding: 0;
+    }
+
+    ion-row:not(.foot){
+      height: 100px;
+    }
+  }
+
+  .color-dark, .color-dark *{
+    color: #000000 !important;
+  }
+  .color-red, .color-red *{
+    color: #a93a39 !important;
+  }
+  .foot, .foot *:not(ion-badge){
+    background: white;
+  }
+
+  .scroll-content{
+    background: #f4f4f4;
+  }
+}

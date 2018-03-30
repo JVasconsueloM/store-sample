@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ producto.nombre }}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <ion-row class="title">
+        <ion-col col-9>
+          <h2>{{ producto.empresa }}</h2>
+        </ion-col>
+        <ion-col col-3>
+            <ion-badge item-end text-lg>{{producto.cantidad}}</ion-badge> Units.
+        </ion-col>
+      </ion-row>
+    </ion-item>
+
+    <img src="{{ producto.image_url }}">
+
+    <ion-card-content>
+      <p>{{ producto.descripcion }}</p>
+      <div *ngIf="producto.condiciones">
+        <h2> Condiciones </h2>
+        <ul>
+          <li *ngFor="let condicion of producto.condiciones"> {{condicion}}</li>
+
+        </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-row class="foot">
+        <ion-col col-9>
+          <button ion-button icon-left clear small color="semi-dark">
+            <span style="text-decoration:line-through;"> S/. {{producto.precio}}</span>
+            <span style="width: 5px"> </span>
+            <span>{{producto.descuento}}</span>
+            <span style="width: 5px"> </span>
+            <h1 class="color-red">S/. {{ producto.precio_con_descuento }}</h1>
+          </button>
+        </ion-col>
+        <ion-col col-3>
+          <button ion-button clear small>
+            <ion-badge item-end text-lg>{{producto.puntos}}</ion-badge> Pts.
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-row>
+    <ion-col>
+      <button ion-button block (click)="buy('visa/efectivo')">
+        <div> COMPRAR</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <button ion-button block color="secondary" (click)="buy('puntos')">
+        <div> USAR PUNTOS</div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,59 @@
+page-signup {
+
+  //.logo {
+  //  padding: 20px 0;
+  //  min-height: 200px;
+  //  text-align: center;
+  //
+  //  img {
+  //    max-width: 150px;
+  //  }
+  //}
+
+
+  .middle{
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    top: 35%;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 3px 0px #521ce6;
+    -moz-box-shadow: 0px 0px 3px 0px #521ce6;
+    box-shadow: 0px 0px 3px 0px #521ce6;
+    img{
+      width: 100%;
+    }
+  }
+
+
+  .background-img {
+    position: absolute;
+    height: 100%;
+  }
+  ion-list {
+    margin: 0;
+    *{
+      font-weight: bold;
+      text-shadow: 1px 1px #000 !important;
+      color: white !important;
+      background: none !important;
+    }
+  }
+  //.logo {
+  //  position: relative;
+  //  min-height: 50%;
+  //  text-align: center;
+  //
+  //  img {
+  //    position: absolute;
+  //    max-width: 50%;
+  //    transform: rotate(-10deg);
+  //    top: -10%;
+  //    left: -20%;
+  //  }
+  //}
+}

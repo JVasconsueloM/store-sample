@@ -1,0 +1,42 @@
+<ion-menu [content]="content">
+  <ion-header *ngIf="afAuth.authState | async as user; else showLogin">
+    <ion-card style="margin: 0; width: 100%;">
+      <img src="assets/imgs/card-saopaolo.png"/>
+      <div class="card-title">
+        <ion-avatar item-start class="perfil">
+          <img *ngIf="!user.photoURL" src="assets/imgs/user.png">
+          <img *ngIf="user.photoURL" src="{{ user.photoURL }}">
+        </ion-avatar>
+      </div>
+      <div class="card-subtitle">
+        <div>{{user.email}}</div>
+        <div>{{user.displayName }}</div>
+
+      </div>
+    </ion-card>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <!--<button ion-item (click)="openPage('ComprasPage')">-->
+      <!--Mi perfil-->
+      <!--</button>-->
+      <button ion-item (click)="openPage('ProductosPage')">
+        Ofertas
+      </button>
+      <button ion-item (click)="openPage('ComprasPage')">
+        Mis compras
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-segment>
+      <ion-segment-button  color="dark" (click)="logout()">
+        <ion-icon name="lock"></ion-icon>
+        Cerrar Sesión
+      </ion-segment-button>
+    </ion-segment>
+  </ion-footer>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage" swipeBackEnabled="false"></ion-nav>

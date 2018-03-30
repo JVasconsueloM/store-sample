@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="logo">
+    <img src="assets/imgs/620972986.jpg">
+  </div>
+
+  <div class="middle">
+    <img src="assets/appicon.svg">
+  </div>
+  <form [formGroup]="form" padding style="padding-top: 0;padding-bottom: 0; margin: -17px 0;">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email Address</ion-label>
+        <ion-input type="text" formControlName="email" spellcheck="false" autocapitalize="off"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onLogin()" type="submit" block [disabled]="!form.valid">Login</button>
+      </ion-col>
+    </ion-row>
+    <ion-row responsive-sm>
+      <ion-col style="text-align: center">
+        <button ion-button outline color="danger" (click)="onLoginGoogle()">
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+        <button ion-button outline color="azul" (click)="onLoginFacebook()">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+        <button ion-button outline (click)="onLoginTwitter()">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <div padding>
+      <a (click)="onSignup()">¿No tienes un cuenta?</a>
+    </div>
+
+  </form>
+</ion-content>

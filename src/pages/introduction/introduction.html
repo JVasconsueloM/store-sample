@@ -1,0 +1,69 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-buttons end *ngIf="show">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChange($event)" pager>
+
+    <ion-slide>
+      <div style="height: 180px;">
+          <img src="assets/svg/road.svg" class="slide-image" style="z-index:0; max-width: 100%; max-height: inherit; left: 5px; top:-5%;"/>
+          <img src="assets/svg/delivery-truck.svg" class="slide-image" style="z-index: 1; right: 0"/>
+      </div>
+
+      <div class="slide-title" padding>¡Entrega garantizada!</div>
+      <small padding>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in bibendum massa, in sollicitudin sem. Sed nec eros nulla.
+      </small>
+    </ion-slide>
+
+    <ion-slide style="padding-top: 0" padding>
+
+      <div style="height: 250px; background: aliceblue">
+        <img src="assets/svg/reuse.svg" class="slide-image" style="width: 35%; top: 15%; left: 35%"/>
+        <img src="assets/svg/online-shop-4.svg" class="slide-image" style="width: 35%; top: 25%; left: 5%"/>
+        <img src="assets/svg/online-shop-1.svg" class="slide-image" style="width: 35%; top: 0%; left: 12%"/>
+        <img src="assets/svg/tablet-1.svg" class="slide-image" style="width: 35%; top: 0%; left:  52%"/>
+        <img src="assets/svg/qr-code.svg" class="slide-image" style="width: 35%; top: 25%; left: 65%"/>
+      </div>
+
+      <div class="slide-title">Ingresa, elige y compra</div>
+      <small padding>
+        lacinia eget nunc. In hac habitasse platea dictumst. Etiam dapibus fringilla tristique. Etiam at nulla varius, accumsan massa ac, semper sem. Donec lobortis nibh fringilla lectus tempus condimentum
+      </small>
+    </ion-slide>
+
+    <ion-slide>
+
+      <div style="height: 250px; width: 250px; border-radius: 75%; display: inline-block; background: lightgreen">
+
+        <img src="assets/svg/payment-method.svg"/>
+      </div>
+      <div padding>
+        <div>Paga rapido y seguro</div>
+        <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in bibendum massa, in sollicitudin sem. Sed nec eros nulla. Proin sit amet magna a metus malesuada interdum ut ac dui
+        </small>
+
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div style="height: 250px;">
+        <img src="assets/svg/online-shop-3.svg" class="slide-image" style="left: 0; max-height: 100%; max-width: 100%; top: -10%"/>
+        <img src="assets/imgs/ica-slidebox-img-4.png" class="slide-image" style="left:10%; top:10%"/>
+      </div>
+      <h2 class="slide-title">¿Listo?</h2>
+      <button ion-button icon-end large clear (click)="startApp()">
+        continuar
+        <ion-icon name="arrow-forward" class="fadeIn" ></ion-icon>
+        <ion-icon name="arrow-forward" class="fadeIn" style="animation-delay: 0.50s; padding: 0"></ion-icon>
+        <ion-icon name="arrow-forward" class="fadeIn" style="animation-delay: 0.75s; padding: 0"></ion-icon>
+      </button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

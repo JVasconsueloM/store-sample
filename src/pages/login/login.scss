@@ -1,0 +1,38 @@
+page-login {
+
+  .logo {
+    position: relative;
+    min-height: 50%;
+    text-align: center;
+
+    img {
+      position: absolute;
+      max-width: 150%;
+      transform: rotate(-10deg);
+      top: -10%;
+      left: -20%;
+    }
+  }
+
+  .list {
+    margin-bottom: 0;
+  }
+
+  .middle{
+    width: 30%;
+    height: 17%;
+    left: 35%;
+    top: 35%;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 3px 0px #521ce6;
+    -moz-box-shadow: 0px 0px 3px 0px #521ce6;
+    box-shadow: 0px 0px 3px 0px #521ce6;
+    img{
+      width: 100%;
+    }
+  }
+}

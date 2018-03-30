@@ -1,0 +1,41 @@
+page-menu {
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    color: #fff;
+  }
+  .card-md{
+    margin: 0 !important;
+    width: auto !important;
+  }
+
+  .perfil{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    display: inline;
+    top: -55px !important;
+    left: 30%;
+    img{
+      border-radius: 75%;
+      width: 90%;
+      height: 90%;
+    }
+  }
+}
